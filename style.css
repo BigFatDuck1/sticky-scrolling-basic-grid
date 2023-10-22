@@ -1,20 +1,22 @@
 body {
     overflow: hidden;
+    font-family: "Roboto", "Helvetica", sans-serif;
 }
 
 :root {
     --header-size: 30px;
-    --footer-size: 15px;
+    --footer-size: 30px;
 }
 
 .main_container {
     /* Contains entire page */
-    height: 100dvh;
+    height: 95dvh;
     width: 100dvw;
     /* Grid properties */
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: var(--header-size) 1fr var(--footer-size);
+    grid-template-rows: var(--header-size) 1fr var(--footer-size); 
+    /* grid-template-rows: 30px 1fr 15px; */
 }
 
 .content {
@@ -23,6 +25,27 @@ body {
     overflow: hidden;
 }
 
+.content_grid {
+    /* Grid properties */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    /* Overflow properties for scrolling */
+    overflow-y: scroll;
+    padding: 20px;
+}
+
+/* Styling that is not necessary to the layout */
+
+.sidebar,
+.header,
+.footer {
+    border: 1px solid grey;
+    margin: 3px;
+}
+
 .card {
     border: 1px solid black;
+    padding: 10px;
+    border-radius: 10px;
 }
