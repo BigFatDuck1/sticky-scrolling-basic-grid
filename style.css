@@ -2,8 +2,27 @@ body {
     overflow: hidden;
 }
 
+:root {
+    --header-size: 30px;
+    --footer-size: 15px;
+}
+
 .main_container {
     /* Contains entire page */
     height: 100dvh;
     width: 100dvw;
+    /* Grid properties */
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: var(--header-size) 1fr var(--footer-size);
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    overflow: hidden;
+}
+
+.card {
+    border: 1px solid black;
 }
